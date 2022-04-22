@@ -13,3 +13,8 @@ step 2: come to the above dir /bin/spark-shell<br>
 
 
 okay, here we start to the traveling of spark basic.<br>
+
+`
+scala> textFile.map(line => line.split(" ").size).reduce((a, b) => if (a > b) a else b)
+res3: Int = 21
+`
