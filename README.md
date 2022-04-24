@@ -12,7 +12,7 @@ okay, here we start to the traveling of spark basic.<br>
 
 run scala without spark-shell, use jar<br>
 the follow steps are: <br>
-
+`
 step 0: logFile path must be the spark-shell path:<br>
     val logFile = "/Users/xxx/Downloads/spark-3.2.1-bin-hadoop3.2/bin/README.md"<br>
 
@@ -23,9 +23,10 @@ $ sbt package<br>
 
 
 step 2: after sbt package run the follow command<br>
-$ /Users/xxx/Downloads/spark-3.2.1-bin-hadoop3.2/bin/spark-submit \<br>
-  --class "SimpleApp" \<br>
-  --master local \<br>
+$ /Users/xxx/Downloads/spark-3.2.1-bin-hadoop3.2/bin/spark-submit \
+  --class "SimpleApp" \
+  --master local \
 /Users/xxx/xxx/OneSteptoSpark/target/scala-2.12/simple-project_2.12-1.0.jar
 
 
+`
