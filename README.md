@@ -9,3 +9,23 @@ step 2: come to the above dir /bin/spark-shell<br>
 <img width="728" alt="截屏2022-04-22 下午5 22 02" src="https://user-images.githubusercontent.com/37787934/164677739-729cd41e-1f61-45a0-94f4-620cb708c77c.png">
 
 okay, here we start to the traveling of spark basic.<br>
+
+run scala without spark-shell, use jar<br>
+the follow steps are: <br>
+
+step 0: logFile path must be the spark-shell path:<br>
+    val logFile = "/Users/xxx/Downloads/spark-3.2.1-bin-hadoop3.2/bin/README.md"<br>
+
+step 1:<br>
+config simple.sbt<br>
+run the follow command to get a jar file<br>
+$ sbt package<br>
+
+
+step 2: after sbt package run the follow command<br>
+$ /Users/xxx/Downloads/spark-3.2.1-bin-hadoop3.2/bin/spark-submit \<br>
+  --class "SimpleApp" \<br>
+  --master local \<br>
+/Users/xxx/xxx/OneSteptoSpark/target/scala-2.12/simple-project_2.12-1.0.jar
+
+
