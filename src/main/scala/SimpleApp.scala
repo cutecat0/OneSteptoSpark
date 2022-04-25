@@ -11,6 +11,11 @@ object SimpleApp {
     val numAs = logData.filter(line => line.contains("a")).count()
     val numBs = logData.filter(line => line.contains("b")).count()
     println("Lines with a: %s \n Lines with b: %s".format(numAs, numBs))
+
+//    test here
+    val lines = sc.textFile("text.txt")s
+    val pairs = lines.map(s => (s, 1))
+    val counts = pairs.reduceByKey((a, b) => a + b)
   }
 }
 
