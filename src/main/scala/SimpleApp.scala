@@ -13,7 +13,7 @@ object SimpleApp {
     println("Lines with a: %s \n Lines with b: %s".format(numAs, numBs))
 
 //    test here
-    val lines = sc.textFile("text.txt")s
+    val lines = sc.textFile("text.txt")
     val pairs = lines.map(s => (s, 1))
     val counts = pairs.reduceByKey((a, b) => a + b)
   }
